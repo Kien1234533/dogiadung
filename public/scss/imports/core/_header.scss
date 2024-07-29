@@ -1,0 +1,56 @@
+// css header
+.header {
+  border-bottom: 1px solid #0000001a;
+  // background: #0000001a;
+  &_content {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    &-logo {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &-nav {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      li {
+        a {
+          padding: 20px;
+          color: #000;
+          font-weight: 600;
+        }
+      }
+    }
+    &-contact {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      gap: 15px;
+      transform: translateY(-50%);
+      a {
+        color: #000;
+        i {
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // Tablet
+  @include sm {
+    &_content {
+      &-nav {
+        display: none;
+      }
+    }
+  }
+}
